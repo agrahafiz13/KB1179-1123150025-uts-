@@ -67,6 +67,15 @@ class MyScreen1 extends StatelessWidget {
                 SizedBox(width: 10),
               ],
             ),
+            Container(
+              child: ElevatedButton(
+                onPressed: () {
+                  //Todo call next Pages
+                },
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
+                child: const Text("Continue", style: TextStyle(fontSize: 14)),
+              ),
+            ),
           ],
         ),
       ),
