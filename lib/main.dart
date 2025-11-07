@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uts_agra/screen/splash_screen_1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'NIM : 1123150025, Agra Alfian Hafiz',
       debugShowCheckedModeBanner: false,
-      home: MaterialApp(),
+      home: MyScreen1(),
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
