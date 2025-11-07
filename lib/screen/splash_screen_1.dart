@@ -6,9 +6,6 @@ class MyScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(
-        0xFFFAF4F4,
-      ), // biar sesuai warna di screenshot
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center, // ⬅️ ini penting!
@@ -25,6 +22,10 @@ class MyScreen1 extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
+            ),
+            Text(
+              "Welcome",
+              style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
             ),
           ],
         ),
