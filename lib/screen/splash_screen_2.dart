@@ -31,7 +31,7 @@ class MyScreen2 extends StatelessWidget {
               style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
             ),
             Text(
-              "Lupa Jati Dirimu bro, \n When You Crying?",
+              "Masih Belom ingat(?), \n Why You Crying?",
               style: TextStyle(
                 fontSize: 14.0,
                 color: Colors.pink,
@@ -47,6 +47,15 @@ class MyScreen2 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
+                    color: Colors.grey,
+                  ),
+                ),
+                SizedBox(width: 10),
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
                     color: Colors.pink,
                   ),
                 ),
@@ -57,15 +66,6 @@ class MyScreen2 extends StatelessWidget {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color.fromARGB(255, 242, 138, 200),
-                  ),
-                ),
-                SizedBox(width: 10),
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.grey,
                   ),
                 ),
                 SizedBox(width: 10),
