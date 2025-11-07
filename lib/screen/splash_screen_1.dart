@@ -27,6 +27,14 @@ class MyScreen1 extends StatelessWidget {
               "Welcome",
               style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
             ),
+            Text(
+              "Forgot Your My?",
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Colors.pink,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),
