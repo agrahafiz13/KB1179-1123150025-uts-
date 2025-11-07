@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uts_agra/screen/splash_screen_3.dart';
 
 class MyScreen2 extends StatelessWidget {
   const MyScreen2({super.key});
@@ -19,7 +20,7 @@ class MyScreen2 extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.pink,
                 image: DecorationImage(
-                  image: AssetImage("assets/images/decadep.png"),
+                  image: AssetImage("assets/images/decadef.png"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -79,6 +80,10 @@ class MyScreen2 extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     // Next Pages
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyScreen3()),
+                    );
                   },
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
                   child: Text("Continue", style: TextStyle(fontSize: 14)),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uts_agra/screen/splash_screen_2.dart';
 
 class MyScreen1 extends StatelessWidget {
   const MyScreen1({super.key});
@@ -79,6 +80,10 @@ class MyScreen1 extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     // Next Pages
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyScreen2()),
+                    );
                   },
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
                   child: Text("Continue", style: TextStyle(fontSize: 14)),
