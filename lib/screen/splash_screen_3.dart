@@ -80,9 +80,10 @@ class MyScreen3 extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     // Next Pages
-                    Navigator.push(
+                    Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(builder: (context) => ScreenLogin()),
+                      (Route<dynamic> route) => false,
                     );
                   },
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
