@@ -9,8 +9,8 @@ class MyScreen1 extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(height: 20),
             Container(
               height: 240,
               width: 240,
@@ -23,6 +23,7 @@ class MyScreen1 extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 20),
             Text(
               "Welcome",
               style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
@@ -35,6 +36,7 @@ class MyScreen1 extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -67,15 +69,22 @@ class MyScreen1 extends StatelessWidget {
                 SizedBox(width: 10),
               ],
             ),
+            SizedBox(height: 30),
             Container(
-              child: ElevatedButton(
-                onPressed: () {
-                  //Todo call next Pages
-                },
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
-                child: const Text("Continue", style: TextStyle(fontSize: 14)),
+              margin: EdgeInsets.only(left: 30, right: 30),
+              child: SizedBox(
+                height: 40,
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Next Pages
+                  },
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
+                  child: Text("Continue", style: TextStyle(fontSize: 14)),
+                ),
               ),
             ),
+            SizedBox(height: 70),
           ],
         ),
       ),
