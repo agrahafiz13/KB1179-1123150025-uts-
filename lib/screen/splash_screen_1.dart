@@ -8,7 +8,7 @@ class MyScreen1 extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // ⬅️ ini penting!
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
@@ -28,12 +28,44 @@ class MyScreen1 extends StatelessWidget {
               style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
             ),
             Text(
-              "Forgot Your My?",
+              "Lupa Jati Dirimu bro, \n When You Crying?",
               style: TextStyle(
                 fontSize: 14.0,
                 color: Colors.pink,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.pink,
+                  ),
+                ),
+                SizedBox(width: 10),
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color.fromARGB(255, 242, 138, 200),
+                  ),
+                ),
+                SizedBox(width: 10),
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.grey,
+                  ),
+                ),
+                SizedBox(width: 10),
+              ],
             ),
           ],
         ),
