@@ -19,18 +19,18 @@ class MyScreen3 extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.pink,
                 image: DecorationImage(
-                  image: AssetImage("assets/images/decadep.png"),
+                  image: AssetImage("assets/images/decade.png"),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             SizedBox(height: 20),
             Text(
-              "Welcome 3",
+              "Welcome",
               style: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
             ),
             Text(
-              "Lupa Jati Dirimu bro, \n When You Crying?",
+              "Udah Gak Bisa? \n Yaudahlah ",
               style: TextStyle(
                 fontSize: 14.0,
                 color: Colors.pink,
@@ -41,15 +41,6 @@ class MyScreen3 extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.pink,
-                  ),
-                ),
-                SizedBox(width: 10),
                 Container(
                   width: 10,
                   height: 10,
@@ -68,6 +59,15 @@ class MyScreen3 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 10),
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.pink,
+                  ),
+                ),
+                SizedBox(width: 10),
               ],
             ),
             SizedBox(height: 30),
@@ -79,6 +79,10 @@ class MyScreen3 extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     // Next Pages
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Login()),
+                    );
                   },
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.pink),
                   child: Text("Continue", style: TextStyle(fontSize: 14)),
