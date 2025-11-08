@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uts_agra/screen/login.dart';
+import 'package:flutter_uts_agra/screen/widget/footer.dart';
 
 class MyScreen3 extends StatelessWidget {
   const MyScreen3({super.key});
@@ -107,6 +108,7 @@ class MyScreen3 extends StatelessWidget {
           );
         },
       ),
+      bottomNavigationBar: const Footer(),
     );
   }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uts_agra/screen/widget/footer.dart';
 
 class ScreenLogin extends StatelessWidget {
   const ScreenLogin({super.key});
@@ -189,6 +190,7 @@ class ScreenLogin extends StatelessWidget {
           );
         },
       ),
+      bottomNavigationBar: const Footer(),
     );
   }
 }
