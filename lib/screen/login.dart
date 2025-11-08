@@ -92,6 +92,7 @@ class ScreenLogin extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
+                    // Tombol Login utama
                     ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
@@ -101,7 +102,6 @@ class ScreenLogin extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        elevation: 2,
                       ),
                       child: const Text(
                         'Login',
@@ -109,6 +109,43 @@ class ScreenLogin extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+
+                    Row(
+                      children: const [
+                        Expanded(
+                          child: Divider(thickness: 1, color: Colors.grey),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 8),
+                          child: Text(
+                            'atau',
+                            style: TextStyle(color: Colors.grey, fontSize: 14),
+                          ),
+                        ),
+                        Expanded(
+                          child: Divider(thickness: 1, color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 24),
+
+                    // Tombol Social Login
+                    OutlinedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(Icons.g_mobiledata, color: Colors.pink),
+                      label: const Text(
+                        'Login dengan Google',
+                        style: TextStyle(color: Colors.pink),
+                      ),
+                      style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        side: const BorderSide(color: Color(0xFFE0E0E0)),
                       ),
                     ),
                   ],
