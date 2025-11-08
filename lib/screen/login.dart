@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uts_agra/screen/widget/footer.dart';
 
-class ScreenLogin extends StatelessWidget {
+class ScreenLogin extends StatefulWidget {
   const ScreenLogin({super.key});
+
+  @override
+  State<ScreenLogin> createState() => _ScreenLoginState();
+}
+
+class _ScreenLoginState extends State<ScreenLogin> {
+  bool _obscurePassword = true; // 🔒 status sembunyikan password
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +61,7 @@ class ScreenLogin extends StatelessWidget {
                     ),
                     SizedBox(height: fieldSpacing),
 
+                    // 📨 Email Field
                     TextField(
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
@@ -78,13 +86,29 @@ class ScreenLogin extends StatelessWidget {
                     ),
                     SizedBox(height: fieldSpacing),
 
+                    // 🔑 Password Field dengan Toggle Visibility
                     TextField(
-                      obscureText: true,
+                      obscureText: _obscurePassword,
                       decoration: InputDecoration(
                         labelText: 'Password',
                         hintText: 'Masukkan password Anda',
                         prefixIcon: const Icon(Icons.lock_outline),
-                        suffixIcon: const Icon(Icons.visibility_outlined),
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _obscurePassword
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
+                            color: Colors.grey[600],
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              _obscurePassword = !_obscurePassword;
+                            });
+                          },
+                          tooltip: _obscurePassword
+                              ? 'Tampilkan Password'
+                              : 'Sembunyikan Password',
+                        ),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12.0),
                         ),
@@ -101,6 +125,7 @@ class ScreenLogin extends StatelessWidget {
                         ),
                       ),
                     ),
+
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
@@ -115,6 +140,7 @@ class ScreenLogin extends StatelessWidget {
                       ),
                     ),
 
+                    // 🩷 Tombol Login
                     SizedBox(
                       width: double.infinity,
                       height: buttonHeight,
@@ -139,6 +165,7 @@ class ScreenLogin extends StatelessWidget {
                     ),
                     const SizedBox(height: 24),
 
+                    // Garis pembatas "atau"
                     Row(
                       children: const [
                         Expanded(
@@ -158,6 +185,7 @@ class ScreenLogin extends StatelessWidget {
                     ),
                     const SizedBox(height: 24),
 
+                    // 🔘 Login dengan Google
                     SizedBox(
                       width: double.infinity,
                       height: buttonHeight,
